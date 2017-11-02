@@ -1,8 +1,6 @@
-.confirmation .ticket,
-.ticket .details {
-	display: none;
+body {
+	font-family: Arial, Helvetica, sans-serif;
 }
-
 .vacations {
 	display: flex;
 	justify-content: space-around;
@@ -17,10 +15,23 @@
 	box-sizing: border-box;
 	background-color: #ddd;
 }
-.ticket {
+
+.confirmation .ticket,
+.ticket .details {
+	display: none;
+}
+
+.confirmation .ticket {
 	margin-top: 5px;
 }
 
-.ticket p {
+.confirmation .ticket p {
 	margin: 10px 0;
+}
+
+.confirmation button {
+	font-size: 14px;
+	padding: 3px;
+	background-color: #1d2;
+	border-radius: 5px;
 }
