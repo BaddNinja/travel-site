@@ -1,0 +1,26 @@
+.confirmation .ticket,
+.ticket .details {
+	display: none;
+}
+
+.vacations {
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+	list-style: none;
+}
+
+.confirmation {
+	margin: 0;
+	flex-basis: 30%;
+	padding: 0 10px 20px;
+	box-sizing: border-box;
+	background-color: #ddd;
+}
+.ticket {
+	margin-top: 5px;
+}
+
+.ticket p {
+	margin: 10px 0;
+}
