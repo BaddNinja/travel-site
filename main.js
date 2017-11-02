@@ -1,6 +1,10 @@
-$(document).ready(function() {
-	$('.confirmation').on('click', 'button', function(e) {
-		var ticket = $(e.target).closest('.confirmation').find('.ticket'),
+var confirmation = {
+	init: function() {
+		$('.confirmation').on('click', 'button', this.loadConfirmation);
+		$('.confirmation').on('click', '.view-pass', this.showBoardingPass);
+	},
+	loadConfirmation: function() {
+		var ticket = $(this).closest('.confirmation').find('.ticket'),
 			trip = ticket.data('trip');
 		$.ajax('https://BaddNinja.github.io/travel-site/html/' + trip + '.html', {
 			success: function(response) {
@@ -11,10 +15,14 @@ $(document).ready(function() {
 			},
 			timeout: 3000
 		});
-	});
-
-	$('.confirmation').on('click', '.view-pass', function(event) {
+	},
+	showBoardingPass: function() {
 		event.preventDefault();
 		$(this).closest('.ticket').find('.details').show();
-	});
+		$(this).hide();
+	}
+};
+
+$(document).ready(function() {
+	confirmation.init();
 });
