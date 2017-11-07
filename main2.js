@@ -7,8 +7,6 @@ var confirmation = {
 		var ticket = $(this).closest('.confirmation').find('.ticket'),
 			trip = ticket.data('trip');
 		$.ajax('https://BaddNinja.github.io/travel-site/data/' + trip + '.json', {
-			contentType: 'application/json',
-			dataType: 'json',
 			success: function(response) {
 				var msg;
 				msg.append('<p><strong>Destination: ' + '</strong>'+ response.location + '</p>');
