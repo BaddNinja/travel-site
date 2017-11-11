@@ -9,7 +9,7 @@ var confirmation = {
 			url = './data/' + trip + '.json';
 
 		$.ajax(url, {
-			dataType: 'json',
+			//dataType: 'json',
 			//contentType: 'application/json',
 			success: function(response) {		
 				var info = $(`<p><strong>Destination: </strong>${response.location}</p>
