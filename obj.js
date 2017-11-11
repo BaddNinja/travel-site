@@ -7,7 +7,7 @@ var confirmation = {
 		alert('You pressed a button!');
 		var ticket = $(this).closest('.confirmation').find('.ticket'),
 			trip = ticket.data('trip'),
-			url = 'https://BaddNinja.github.io/travel-site/data/' + trip + '.json';
+			url = './data/' + trip + '.json';
 		alert(url);
 		$.ajax(url, {
 			dataType: 'json',
