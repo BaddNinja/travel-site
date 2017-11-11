@@ -5,8 +5,10 @@ var confirmation = {
 	},
 	loadConfirmation: function() {
 		var ticket = $(this).closest('.confirmation').find('.ticket'),
-			trip = ticket.data('trip');
-		$.ajax('https://BaddNinja.github.io/travel-site/data/' + trip + '.json', {
+			trip = ticket.data('trip'),
+			url = 'https://BaddNinja.github.io/travel-site/data/' + trip + '.json';
+		alert(url);
+		$.ajax(url, {
 			dataType: 'json',
 			contentType: 'application/json',
 			success: function(response) {
