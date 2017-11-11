@@ -10,7 +10,7 @@ var confirmation = {
 			dataType: 'json',
 			contentType: 'application/json',
 			success: function(response) {
-				alert(response);
+				alert(response.location);
 				//$(ticket).html(response).slideDown();
 			},
 			error: function(request, errorType, errorMessage) {
