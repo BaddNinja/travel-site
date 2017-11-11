@@ -12,9 +12,9 @@ var confirmation = {
 			dataType: 'json',
 			contentType: 'application/json',
 			success: function(response) {
-				var ticketInfo = $('<p>' + response.location + </p>);
-				$('<p>' + response.departure + </p>).appendTo(ticketInfo);
-				$('<p>' + response.flight + </p>).appendTo(ticketInfo);
+				var ticketInfo = $('<p>' + response.location + '</p>');
+				$('<p>' + response.departure + '</p>').appendTo(ticketInfo);
+				$('<p>' + response.flight + '</p>').appendTo(ticketInfo);
 				$(ticket).html(ticketInfo).slideDown();
 			},
 			error: function(request, errorType, errorMessage) {
