@@ -7,7 +7,7 @@ var confirmation = {
 		var ticket = $(this).closest('.confirmation').find('.ticket'),
 			trip = ticket.data('trip'),
 			url = './data/' + trip + '.json';
-		alert(url);
+
 		$.ajax(url, {
 			dataType: 'json',
 			contentType: 'application/json',
