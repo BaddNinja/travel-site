@@ -16,7 +16,7 @@ var confirmation = {
 				$('<p><strong>Departure: </strong>' + response.departure + '</p>').appendTo(ticketInfo);
 				$('<p><strong>Flight: </strong>' + response.flight + '</p>').appendTo(ticketInfo);
 				$('<p><strong>Boarding Pass: </strong><a class="view-pass" href="#">View Boarding Pass' +
-					'</a><div class="details">boarding pass image</div></p>');
+					'</a><div class="details">boarding pass image</div></p>').appendTo(ticketInfo);
 				$(ticket).html(ticketInfo).slideDown();
 			},
 			error: function(request, errorType, errorMessage) {
