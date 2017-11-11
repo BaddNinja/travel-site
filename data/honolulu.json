@@ -1,7 +1,5 @@
-[
-	{
-		"location": "Honolulu, Hawaii",
-		"departure": "Feb 20, 2018 at 09:30",
-		"flight": "815"
-	}
-]
+{
+	"location": "Honolulu, Hawaii",
+	"departure": "Feb 20, 2018 at 09:30",
+	"flight": "815"
+}
