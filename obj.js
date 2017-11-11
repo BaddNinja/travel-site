@@ -4,6 +4,7 @@ var confirmation = {
 		$('.confirmation').on('click', '.view-pass', this.showBoardingPass);
 	},
 	loadConfirmation: function() {
+		alert('You pressed a button!');
 		var ticket = $(this).closest('.confirmation').find('.ticket'),
 			trip = ticket.data('trip'),
 			url = 'https://BaddNinja.github.io/travel-site/data/' + trip + '.json';
