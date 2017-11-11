@@ -4,7 +4,6 @@ var confirmation = {
 		$('.confirmation').on('click', '.view-pass', this.showBoardingPass);
 	},
 	loadConfirmation: function() {
-		alert('You pressed a button!');
 		var ticket = $(this).closest('.confirmation').find('.ticket'),
 			trip = ticket.data('trip'),
 			url = './data/' + trip + '.json';
@@ -13,7 +12,10 @@ var confirmation = {
 			dataType: 'json',
 			contentType: 'application/json',
 			success: function(response) {
-				$(ticket).html(response).slideDown();
+				var ticketInfo = $('<p>' + response.location + </p>);
+				$('<p>' + response.departure + </p>).appendTo(ticketInfo);
+				$('<p>' + response.flight + </p>).appendTo(ticketInfo);
+				$(ticket).html(ticketInfo).slideDown();
 			},
 			error: function(request, errorType, errorMessage) {
 				alert('Error: ' + errorType + ' with message: ' + errorMessage);
