@@ -12,12 +12,19 @@ var confirmation = {
 			dataType: 'json',
 			contentType: 'application/json',
 			success: function(response) {
-				var ticketInfo = $('<p><strong>Destination: </strong>' + response.location + '</p>');
-				$('<p><strong>Departure: </strong>' + response.departure + '</p>').appendTo(ticketInfo);
-				$('<p><strong>Flight: </strong>' + response.flight + '</p>').appendTo(ticketInfo);
-				$('<p><strong>Boarding Pass: </strong><a class="view-pass" href="#">View Boarding Pass' +
-					'</a><div class="details">boarding pass image</div></p>').appendTo(ticketInfo);
-				$(ticket).html(ticketInfo).slideDown();
+				// var ticketInfo = $('<p><strong>Destination: </strong>' + response.location + '</p>');
+				// $('<p><strong>Departure: </strong>' + response.departure + '</p>').appendTo(ticketInfo);
+				// $('<p><strong>Flight: </strong>' + response.flight + '</p>').appendTo(ticketInfo);
+				// $('<p><strong>Boarding Pass: </strong><a class="view-pass" href="#">View Boarding Pass' +
+				// 	'</a><div class="details">boarding pass image</div></p>').appendTo(ticketInfo);
+				var info = $(`<p><strong>Destination: </strong>${response.location}</p>
+							<p><strong>Departure: </strong>${response.departure}</p>
+							<p><strong>Flight #: </strong>${response.flight}</p>
+							<p><strong>Boarding Pass: </strong><a class="view-pass" href="#">View Boarding Pass</a>
+							<div class="details">boarding pass image</div></p>`);
+
+
+				$(ticket).html(info).slideDown();
 			},
 			error: function(request, errorType, errorMessage) {
 				alert('Error: ' + errorType + ' with message: ' + errorMessage);
