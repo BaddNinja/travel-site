@@ -3,10 +3,13 @@ var confirmation = {
 		$('.confirmation').on('click', 'button', this.loadConfirmation);
 		$('.confirmation').on('click', '.view-pass', this.showBoardingPass);
 	},
+
 	loadConfirmation: function() {
 		var ticket = $(this).closest('.confirmation').find('.ticket'),
 			trip = ticket.data('trip');
-		$.ajax('https://BaddNinja.github.io/travel-site/html/' + trip + '.html', {
+
+		$.ajax({
+			url: 'https://BaddNinja.github.io/travel-site/html/' + trip + '.html',
 			success: function(response) {
 				$(ticket).html(response).slideDown();
 			},
@@ -16,6 +19,7 @@ var confirmation = {
 			timeout: 3000
 		});
 	},
+
 	showBoardingPass: function() {
 		event.preventDefault();
 		$(this).closest('.ticket').find('.details').show();
